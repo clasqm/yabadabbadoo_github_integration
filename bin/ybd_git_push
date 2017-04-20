@@ -1,0 +1,14 @@
+#!/boot/system/bin/bash
+
+cd $1
+
+read -e -p "Enter Github comment: " github
+git add .
+git commit -m "$github"
+git push -u origin master
+
+echo
+echo 
+echo "Press ENTER to close window"
+read input
+

@@ -1,0 +1,16 @@
+#!/boot/system/bin/bash
+
+cd $1
+
+read -e -p "Enter Github URL: " github
+git init
+git add .  
+git commit -m "Initial Import."
+git remote add origin $github
+git push -u origin master
+
+echo
+echo 
+echo "Press ENTER to close window"
+read input
+

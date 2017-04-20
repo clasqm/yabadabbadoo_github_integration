@@ -1,0 +1,10 @@
+#!/bin/sh
+cd /boot/home/projects/yabadabbadoo_github_integration
+package create -b yabadabbadoo_github_integration_1.0-1_any.hpkg
+sleep 0.5
+package add yabadabbadoo_github_integration_1.0-1_any.hpkg bin
+sleep 0.5
+addattr BeShare:Info "Github integration scripts for Yabadabbadoo" yabadabbadoo_github_integration_1.0-1_any.hpkg
+becopy yabadabbadoo_github_integration_1.0-1_any.hpkg "/Storage/Haiku/My ports"
+mv yabadabbadoo_github_integration_1.0-1_any.hpkg /boot/home/projects/repo2
+sync

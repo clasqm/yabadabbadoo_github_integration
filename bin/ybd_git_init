@@ -1,8 +1,48 @@
 #!/boot/system/bin/bash
 
-cd $1
+cd "$1"
 
-read -e -p "Enter Github URL: " github
+rm -f .gitignore
+echo "#Yabadabbadoo-specific #" >.gitignore
+echo "PackagingFolder/**" >> .gitignore
+echo "# Backup files #" >> .gitignore
+echo "*.bak" >> .gitignore
+echo "*.bkp" >> .gitignore
+echo "*.bk?" >> .gitignore
+echo "# Compiled source #" >> .gitignore
+echo "*.com" >> .gitignore
+echo "*.class" >> .gitignore
+echo "*.dll" >> .gitignore
+echo "*.exe" >> .gitignore
+echo "*.o" >> .gitignore
+echo "*.so" >> .gitignore
+echo "# Packages #" >> .gitignore
+echo "# it's better to unpack these files and commit the raw source" >> .gitignore
+echo "# git has its own built in compression methods" >> .gitignore
+echo "*.7z" >> .gitignore
+echo "*.dmg" >> .gitignore
+echo "*.gz" >> .gitignore
+echo "*.iso" >> .gitignore
+echo "" >> .gitignore
+echo "*.jar" >> .gitignore
+echo "*.rar" >> .gitignore
+echo "*.tar" >> .gitignore
+echo "*.zip" >> .gitignore
+echo "*.hpkg" >> .gitignore
+echo "# Logs and databases #" >> .gitignore
+echo "*.log" >> .gitignore
+echo "*.sql" >> .gitignore
+echo "*.sqlite" >> .gitignore
+echo "# OS generated files #" >> .gitignore
+echo ".DS_Store" >> .gitignore
+echo ".DS_Store?" >> .gitignore
+echo "._*" >> .gitignore
+echo ".Spotlight-V100" >> .gitignore
+echo ".Trashes" >> .gitignore
+echo "ehthumbs.db" >> .gitignore
+echo "Thumbs.db" >> .gitignore
+
+read -e -p "Enter Github/Bitbucket/Sourceforge URL: " github
 git init
 git add .  
 git commit -m "Initial Import."
@@ -13,4 +53,3 @@ echo
 echo 
 echo "Press ENTER to close window"
 read input
-

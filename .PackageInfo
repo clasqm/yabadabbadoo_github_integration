@@ -17,7 +17,7 @@ provides {
 					cmd:ybd_git_pull
 }
 requires {
-					yabadabbadoo >= 0.4
+					yabadabbadoo >= 0.4.1
 					git
 }
 URLs {

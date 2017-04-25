@@ -1,9 +1,11 @@
 name				yabadabbadoo_github_integration
-version				1.0-1
+version				1.1-1
 architecture			any
 
-summary			"Github integration scripts for Yabadabbadoo"
-Description			"A small set of bash scripts that add Github integration to the Yabadabbadoo IDE. You will have to restart Yabadabbadoo to auto-detect this package.
+summary			"git integration scripts for Yabadabbadoo"
+Description			"A small set of bash scripts that add git (esp. Github) integration to the Yabadabbadoo IDE. You will have to restart Yabadabbadoo to auto-detect this package. That will not be required if you installed it from the Yabadabbadoo menu itself.
+
+Some scripts adapted for Haiku from scripts by rShetty, see https://github.com/rShetty/Scriptomaniac
 "
 
 packager			"Michel Clasquin-Johnson <clasqm@gmail.com>"
@@ -11,10 +13,12 @@ vendor				"clasqm"
 copyrights			"Michel Clasquin-Johnson <clasqm@gmail.com>"
 licenses				"Public Domain"
 provides {
-					yabadabbadoo_github_integration = 1.0-1
+					yabadabbadoo_github_integration = 1.1-1
 					cmd:ybd_git_init
 					cmd:ybd_git_push
 					cmd:ybd_git_pull
+					cmd:ybd_git_create
+					ybd_github_follower_search
 }
 requires {
 					yabadabbadoo >= 0.4.1
